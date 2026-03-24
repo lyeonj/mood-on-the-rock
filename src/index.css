@@ -68,11 +68,30 @@
 }
 
 :root {
-  color: #171717;
-  background: #FFFFFF;
+  color: #f5f6ff;
+  background: #0b0b10;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0b10;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
