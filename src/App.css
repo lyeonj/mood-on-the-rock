@@ -473,3 +473,157 @@ input[type='range'] {
   font-weight: 800;
   backdrop-filter: blur(10px);
 }
+
+@media (max-width: 768px) {
+  .topbar {
+    position: static;
+    padding: 16px 14px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .stepper {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: thin;
+  }
+
+  .step {
+    flex: 0 0 auto;
+    padding: 9px 11px;
+  }
+
+  .step .label {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .grid {
+    width: calc(100% - 20px);
+    padding: 12px 0 28px;
+    gap: 12px;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  .cardHeader,
+  .twoCol,
+  .resultGrid,
+  .editGrid,
+  .deliverGrid {
+    padding: 14px;
+  }
+
+  .row {
+    gap: 8px;
+  }
+
+  .row > .btn {
+    flex: 1 1 140px;
+    justify-content: center;
+  }
+
+  .imageBox {
+    height: 180px;
+  }
+
+  .recipeName {
+    font-size: 18px;
+  }
+
+  .pre {
+    max-height: 260px;
+    font-size: 11px;
+  }
+
+  .toast {
+    width: calc(100% - 24px);
+    text-align: center;
+    border-radius: 12px;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 14px 10px;
+  }
+
+  .grid {
+    width: calc(100% - 12px);
+  }
+
+  .cardHeader,
+  .twoCol,
+  .resultGrid,
+  .editGrid,
+  .deliverGrid {
+    padding: 12px;
+  }
+
+  .step {
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .step .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .segBtn {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+    padding: 9px 10px;
+  }
+
+  .rangeRow {
+    grid-template-columns: 1fr 56px;
+    gap: 8px;
+  }
+
+  .rangeValue {
+    width: 56px;
+    font-size: 12px;
+  }
+
+  .imageBox {
+    height: 150px;
+  }
+
+  .recipeName {
+    font-size: 16px;
+  }
+
+  .kv {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .list {
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .pre {
+    padding: 10px;
+    max-height: 220px;
+  }
+}
