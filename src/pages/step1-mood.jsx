@@ -402,7 +402,7 @@ const ModalPanel = styled.div`
   border: 1px solid #404040;
 `;
 
-const ModalTitle = styled.h2`
+const ModalTitle = styled.span`
   margin: 0 0 20px;
   font-size: 16px;
   font-weight: 600;
