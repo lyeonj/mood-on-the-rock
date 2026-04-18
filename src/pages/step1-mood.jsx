@@ -289,7 +289,7 @@ const FileUpload = styled.button`
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(0.99);
+    transform: scale(0.995);
   }
 `;
 
@@ -487,6 +487,10 @@ const ModalConfirmButton = styled.button`
 const Footer = styled.div`
   padding: 12px 20px calc(20px + env(safe-area-inset-bottom, 0px));
   flex-shrink: 0;
+
+  @media (min-width: 500px) {
+    padding: 12px 20px 40px;
+  }
 `;
 
 export default Step1Mood;

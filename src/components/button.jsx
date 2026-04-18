@@ -21,11 +21,7 @@ const StyledButton = styled.button`
 
     &:hover {
         filter: brightness(0.9);
-        transform: scale(0.99);
-    }
-
-    &:active {
-        transform: scale(0.99);
+        transform: scale(0.995);
     }
 `;
 

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-const Option = ({ emoji, label, selected, type = 'button', ...rest }) => (
-    <StyledOption type={type} $active={selected} aria-pressed={selected} {...rest}>
-        <span aria-hidden>{emoji}</span> {label}
+const Option = ({ emoji, label, selected, activeStyle = 'outline', type = 'button', ...rest }) => (
+    <StyledOption type={type} $active={selected} $activeStyle={activeStyle} aria-pressed={selected} {...rest}>
+        {emoji ? <span aria-hidden>{emoji}</span> : null}
+        {label}
     </StyledOption>
 );
 
@@ -23,18 +24,26 @@ const StyledOption = styled.button`
 
     @media (hover: hover) and (pointer: fine) {
         &:hover {
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
     }
 
-    ${({ $active }) =>
-        $active &&
-        `
-        border-color: var(--mint);
-        color: var(--mint);
-        
-        box-shadow: 0 0 0 1px rgba(114, 235, 234, 0.25);
-    `}
+    ${({ $active, $activeStyle }) => {
+        if (!$active) return '';
+        if ($activeStyle === 'filled') {
+            return `
+                border-color: var(--mint);
+                background: var(--mint);
+                color: var(--black);
+                box-shadow: 0 0 0 1px rgba(114, 235, 234, 0.25);
+            `;
+        }
+        return `
+            border-color: var(--mint);
+            color: var(--mint);
+            box-shadow: 0 0 0 1px rgba(114, 235, 234, 0.25);
+        `;
+    }}
 `;
 
 export default Option;
