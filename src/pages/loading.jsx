@@ -9,7 +9,7 @@ const Loading = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/step3-result');
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -97,7 +97,7 @@ const Icon = styled.img`
 `;
 
 const Message = styled.p`
-  color: var(--mint);
+  color: var(--white);
   font-size: 18px;
   font-weight: 400;
   animation: ${pulse} 2s ease-in-out infinite;

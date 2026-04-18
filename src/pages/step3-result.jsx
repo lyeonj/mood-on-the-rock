@@ -16,7 +16,9 @@ const Step3Result = () => {
       <Header step={3} />
       <Main>
         <ResultSection>
-          <CocktailImage src={cocktailImage} />
+          <ImageWrapper>
+            <CocktailImage src={cocktailImage} />
+          </ImageWrapper>
           <CocktailName>{cocktailName}</CocktailName>
           <Divider />
         </ResultSection>
@@ -61,6 +63,26 @@ const ResultSection = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.06) 50%,
+      rgba(255, 255, 255, 0.00) 100%
+    );
+  }
 `;
 
 const CocktailImage = styled.img`
