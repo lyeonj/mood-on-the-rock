@@ -19,9 +19,9 @@ const Step2Taste = () => {
   const navigate = useNavigate();
   const [selectedBase, setSelectedBase] = useState('recommend');
   const [abv, setAbv] = useState(10);
-  const [sweetness, setSweetness] = useState(2);
-  const [sourness, setSourness] = useState(2);
-  const [bitterness, setBitterness] = useState(2);
+  const [sweetness, setSweetness] = useState(3);
+  const [sourness, setSourness] = useState(3);
+  const [bitterness, setBitterness] = useState(3);
   const [sparkling, setSparkling] = useState(null);
 
   const sliders = useMemo(
@@ -128,7 +128,7 @@ const Step2Taste = () => {
       </Main>
 
       <Footer>
-        <Button onClick={() => navigate('/step3-result')}>다음</Button>
+        <Button onClick={() => navigate('/loading')}>다음</Button>
       </Footer>
     </Wrapper>
   );
@@ -178,7 +178,7 @@ const SparklingButton = styled.button`
   border-radius: 100px;
   background-color: ${({ $selected }) => ($selected ? 'var(--mint)' : 'var(--black)')};
   color: ${({ $selected }) => ($selected ? 'var(--black)' : 'var(--mint)')};
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
