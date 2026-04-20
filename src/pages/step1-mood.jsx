@@ -403,7 +403,6 @@ const ModalPanel = styled.div`
 `;
 
 const ModalTitle = styled.span`
-  margin: 0 0 20px;
   font-size: 16px;
   font-weight: 600;
   color: var(--white);
@@ -414,6 +413,7 @@ const ModalColorField = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  margin: 20px 0;
 `;
 
 const ModalColorInput = styled.input`
